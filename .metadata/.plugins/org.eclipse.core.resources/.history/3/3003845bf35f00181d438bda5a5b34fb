@@ -1,0 +1,10 @@
+package com.i;
+
+public class File2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File dummyFile=new File("dummy.txt");
+	}
+
+}

@@ -1,0 +1,19 @@
+package mypack;
+import mypack.Mouse;
+
+public class Dog {
+	int fuColor;
+	float height;
+	float weight;
+	void cathMouse(Mouse m){
+		m.scream();
+	}
+	public static void catchMouse{
+		
+	}
+	public static void main(String[]args){
+		Dog d=new Dog();
+		Mouse m =new Mouse;
+		d.catchMouse(m);
+	}
+}

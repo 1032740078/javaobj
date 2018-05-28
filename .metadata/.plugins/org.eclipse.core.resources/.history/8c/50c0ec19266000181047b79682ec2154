@@ -1,0 +1,39 @@
+package com.robin;
+
+import org.apache.commons.net.ftp.*;
+
+public class FtpLoginEnumeration {
+/*	ip:119.28.50.82
+	port:21
+	password:12345678x
+	user:QQ1032740078
+*/
+	class FtpLogin {
+		int port;
+		String ip;
+		String password;
+		String user;
+
+		public FtpLogin(int _port, String _ip, String _password, String _user) {
+			// TODO Auto-generated constructor stub
+			this.port = _port;
+			this.ip = _ip;
+			this.password = _password;
+			this.user = _user;
+
+		}
+		public void login(){
+			
+			
+		}
+	}
+
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

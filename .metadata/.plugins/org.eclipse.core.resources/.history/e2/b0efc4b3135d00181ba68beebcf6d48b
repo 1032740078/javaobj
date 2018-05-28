@@ -1,0 +1,52 @@
+package mypack;
+/*
+ * 
+ */
+public class HelloWord {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Age(10);
+		System.out.println(Name("123"));
+		System.out.println(a(6));
+		Myfor(10);
+		Mywhile(1000000);
+
+	}
+
+	public static void Age(int age) {
+		System.out.println(age);
+	}
+
+	public static String Name(String name) {
+		return name;
+
+	}
+
+	public static int a(int i) {
+		int ii = i >= 5 ? 5 : 0;
+		if (i >= 5) {
+			System.out.println(5);
+		} else {
+			System.out.println(0);
+		}
+		return ii;
+
+	}
+
+	public static void Myfor(int a) {
+		for (int i = 0; i < a; i++) {
+			System.out.println(i + 1);
+		}
+	}
+
+	public static void Mywhile(int a) {
+		int i=0;
+		while (i<a){
+			System.out.println(i + 1);
+			i++;
+			if(i==4999){
+				break;
+			}
+		}
+	}
+}

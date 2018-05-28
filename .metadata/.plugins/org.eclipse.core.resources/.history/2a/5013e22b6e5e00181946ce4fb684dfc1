@@ -1,0 +1,26 @@
+package com.rcdata.robin;
+
+public class TestAccess {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class T {
+	private int i = 0;
+	int j = 0;
+	protected int k = 0;
+	public int m = 0;
+	public void m(){
+		i=9;
+	}
+}
+class Tt{
+	public void m(){
+		T t=new T();
+		System.out.println(t.j);
+	}
+}

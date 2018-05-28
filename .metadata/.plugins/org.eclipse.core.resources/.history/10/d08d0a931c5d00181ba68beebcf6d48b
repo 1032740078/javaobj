@@ -1,0 +1,21 @@
+package mypack;
+
+public class Point {
+	double x,y,z;
+	Point(double point_x,double point_y,double point_z){
+		x=point_x;
+		y=point_y;
+		z=point_z;
+	}
+	public static void calculate() {
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generted method stub
+		Point coordinate=new Point(3, 5.9, 8.8);
+	}
+
+}

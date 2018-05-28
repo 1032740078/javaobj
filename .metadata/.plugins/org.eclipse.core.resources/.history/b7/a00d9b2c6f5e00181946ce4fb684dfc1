@@ -1,0 +1,25 @@
+package com.rcdata.robin;
+
+abstract class Animal{
+	private String name;
+	Animal (String name){
+		this.name=name;
+	}
+	public abstract void enjoy();
+}
+
+
+
+
+
+
+
+
+
+public class TestAccess{
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

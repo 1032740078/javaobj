@@ -1,0 +1,14 @@
+package com.i;
+
+public class arr {
+	public static void main(String[] args) {
+		int a[][]={{1},{1,2,3},{12321}};
+		for(int i=0;i==a.length-1;i++){
+			System.out.println(i);
+			for (int ii=0;ii==a[i].length-1;ii++){
+				System.out.println(a[i][ii]);
+			}
+		}
+	}
+
+}

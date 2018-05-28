@@ -1,0 +1,55 @@
+package com.robin;
+
+import java.io.IOException;
+import java.net.SocketException;
+import org.apache.commons.net.ftp.FTPClient;
+
+abstract class Ftp {
+	int port;
+	String host;
+	String password;
+	String user;
+
+	public Ftp(int _port, String _host, String _password, String _user) {
+		this.port = _port;
+		this.host = _host;
+		this.password = _password;
+		this.user = _user;
+
+	}
+//	连接Ftp服务器
+	public abstract void goConnect();
+//	尝试登录Ftp服务器
+	public abstract void goLogin();
+//	登录成功
+	public abstract void loginWin();
+//	记录成功的记录
+	public abstract void setRecord();
+//	发送成功的记录
+	public abstract void sendRemind();
+	
+}
+
+
+//FTPClient ftp = new FTPClient();
+//try {
+//	ftp.connect(this.host, this.port);
+//	ftp.login(this.user, this.password);
+//} catch (SocketException e) {
+//	e.printStackTrace();
+//} catch (IOException e) {
+//	e.printStackTrace();
+//}
+
+public class FtpLoginEnumeration {
+	/*
+	 * host:119.28.50.82 port:21 password:12345678x user:1032740078_2
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		FtpLogin user1 = new FtpLogin(21, "119.28.50.82", "12345678x", "1032740078_2");
+//		user1.connect();
+
+	}
+
+}

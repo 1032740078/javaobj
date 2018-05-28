@@ -1,0 +1,15 @@
+package com.i;
+
+public class ae {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[]={1,2,3};
+		try{
+		System.out.println(a[3]);}
+		catch(ArithmeticException ae){
+			System.out.println(a[2]);
+		}
+	}
+
+}

@@ -1,0 +1,20 @@
+package mypack;
+
+/*
+ * 
+ */
+public class HelloWord {
+	int id;
+	int age;
+	HelloWord (int this_id,int this_age){
+		id=this_id;
+		age=this_age;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stu
+		HelloWord a=new HelloWord(001, 20);
+		System.out.println(a.age);
+		System.out.println(a.id);
+	}
+
+}

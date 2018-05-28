@@ -1,0 +1,23 @@
+package mypack;
+
+public class Point {
+
+	double x, y, z;
+
+	Point(double point_x, double point_y, double point_z) {
+		x = point_x;
+		y = point_y;
+		z = point_z;
+	}
+
+	void calculate() {
+		double result = (this.x * this.x) + (this.y * this.y) + (this.z * this.z);
+		System.out.println(result);
+	}
+
+	public static void main(String[] args) {
+		Point coordinate = new Point(1, 2.9, 8.8);
+		coordinate.calculate();
+	}
+
+}

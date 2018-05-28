@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="mypack.HelloWord"/>
+<fullyQualifiedTypeName name="java.awt.Point"/>
+<fullyQualifiedTypeName name="mypack.Point"/>
+<fullyQualifiedTypeName name="com.rcdata.robin.person"/>
+<fullyQualifiedTypeName name="com.rcdata.robin.Student"/>
+<fullyQualifiedTypeName name="org.apache.commons.net.ftp.FTPClientConfig"/>
+<fullyQualifiedTypeName name="com.robin.FtpLoginEnumeration.FtpLogin"/>
+<fullyQualifiedTypeName name="sun.net.ftp.FtpClient"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="com.robin.Aa"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.bind.util.Which"/>
+<fullyQualifiedTypeName name="com.robin.Ftp"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.sun.java.util.jar.pack.Package.File"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.robin.goFtp"/>
+</qualifiedTypeNameHistroy>

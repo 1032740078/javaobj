@@ -1,0 +1,31 @@
+package com.rcdata.robin;
+
+abstract class Animal {
+	private String name;
+
+	Animal(String name) {
+		this.name = name;
+	}
+
+	public abstract void enjoy();
+}
+
+class Cat extends Animal {
+	private String eyesColor;
+
+	Cat(String n,String c){
+		super(n);
+		eyesColor=c;
+	public Void enjoy(){
+		System.out.println("miaomiaomiao");
+	}
+	}
+}
+
+public class TestAccess {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

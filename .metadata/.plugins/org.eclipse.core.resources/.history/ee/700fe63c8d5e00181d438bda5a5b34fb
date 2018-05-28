@@ -1,0 +1,24 @@
+package com.i;
+
+class ren {
+	String type;
+	String name;
+
+	ren(String _type, String _name) {
+		this.type = _type;
+		this.name = _name;
+	}
+}
+
+interface zgdw{
+	default void ws(){};
+}
+
+public class zhaogudongwu {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

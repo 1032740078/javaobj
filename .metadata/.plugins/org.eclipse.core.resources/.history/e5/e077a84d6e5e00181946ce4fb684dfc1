@@ -1,0 +1,18 @@
+package com.rcdata.robin;
+
+abstract class dongwu {
+	public abstract void jiao(){};
+}
+
+public class TestAccess {
+class mao extends dongwu{
+	public void jiao(){
+		System.out.println("ίχίχ½Π");
+	};
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

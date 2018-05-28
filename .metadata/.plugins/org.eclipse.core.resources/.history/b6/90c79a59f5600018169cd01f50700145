@@ -1,0 +1,97 @@
+package com.robin;
+
+import java.io.IOException;
+import java.net.SocketException;
+import org.apache.commons.net.ftp.FTPClient;
+
+import sun.net.ftp.FtpClient;
+
+abstract class Ftp {
+	// 端口
+	int port;
+	// ftp服务器ip地址
+	String host;
+	String password;
+	String user;
+
+	public Ftp(int _port, String _host, String _password, String _user) {
+		this.port = _port;
+		this.host = _host;
+		this.password = _password;
+		this.user = _user;
+
+	}
+
+	// 尝试登录Ftp服务器
+	public abstract void goLogin();
+
+	// 登录成功
+	public abstract void loginWin();
+
+	// 记录成功的记录
+	public abstract void setRecord();
+
+	// 发送成功的记录
+	public abstract void sendRecord();
+
+}
+
+class Aa extends Ftp {
+	public Aa(int _port, String _host, String _password, String _user) {
+		super(_port, _host, _password, _user);
+	}
+
+	@Override
+	public void goLogin() {
+		FTPClient ftp = new FTPClient();
+		try {
+			ftp.connect(this.host, this.port);
+			if(ftp.login(this.user, this.password)==true){
+				loginWin();
+			}
+		} catch (SocketException e) {
+		} catch (IOException e) {
+		}
+
+	}
+
+	@Override
+	public void loginWin() {
+		// TODO Auto-generated method stub
+		System.out.println("登录成功:\n账号:"+this.user+"\n密码"+this.password+"\n");
+		setRecord();
+		sendRecord();
+	}
+
+	@Override
+	public void setRecord() {
+		// TODO Auto-generated method stub
+		System.out.println("记录成功!");
+	}
+
+	@Override
+	public void sendRecord() {
+		// TODO Auto-generated method stub
+		System.out.println("发送成功");
+	}
+
+}
+
+// FTPClient ftp = new FTPClient();
+// try {
+// ftp.connect(this.host, this.port);
+// ftp.login(this.user, this.password);
+// } catch (SocketException e) {
+// e.printStackTrace();
+// } catch (IOException e) {
+// e.printStackTrace();
+// }
+
+public class FtpLoginEnumeration {
+	/*
+	 * host:119.28.50.82 port:21 password:12345678x user:1032740078_2
+	 */
+	public static void main(String[] args) {
+	}
+
+}
